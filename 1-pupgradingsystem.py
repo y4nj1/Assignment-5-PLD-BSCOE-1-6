@@ -19,6 +19,11 @@
 # Grade/Mark: 1.75
 # Description: Very Good
 
+import math
+def round_half_up(n, decimals=0):
+    multiplier = 10 ** decimals
+    return math.floor(n*multiplier + 0.5) / multiplier
+
 def getLetter():
     prelimq = input("Is your grade INC, W, or D? Please enter Yes or No: ")
     if prelimq == "Yes":
@@ -27,7 +32,7 @@ def getLetter():
     else:
         if prelimq == "No":
             _grade = float(input(("Enter your grade here: ")))
-            grade = round(_grade)
+            grade = round_half_up(_grade)
             return grade
 
 
@@ -65,10 +70,13 @@ def mark():
     elif inputGrade == 75:
             print("Grade:\x1b[38;5;226m 3.00 \x1b[0m")
             print("Remarks: \x1b[38;5;226mPassed\x1b[0m")
-    else:
-        if inputGrade >= 65 and inputGrade <= 74:
+    elif inputGrade >= 65 and inputGrade <= 74:
             print("Grade:\x1b[38;5;88m 5.00 \x1b[0m")
             print("Remarks: \x1b[38;5;88mFailed\x1b[0m")
+    else:
+        if inputGrade <= 64:
+            print("Your grade may be \x1b[38;5;207mIncomplete,\x1b[0m or you have \x1b[38;5;32mWithdrawn\x1b[0m or \x1b[38;5;93mDropped\x1b[0m the subject.\033[0m")
+            print("\033[1mPlease contact your Professor for more details.\033[0m")
 
 inputGrade = getLetter()
 _Mark = mark()
