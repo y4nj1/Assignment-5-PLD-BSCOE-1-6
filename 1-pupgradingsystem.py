@@ -34,7 +34,16 @@ def getLetter():
 
 
 inputGrade = getLetter()
-
+def mark():
+    if inputGrade == "INC":
+       print("Remarks: \x1b[38;5;207mIncomplete\x1b[0m")
+       print("\033[1mYour grade has been recorded.\033[0m")
+    elif inputGrade == "W":
+       print("Remarks: \x1b[38;5;32mWithdrawn\x1b[0m")
+       print("\033[1mYour grade has been recorded.\033[0m")
+    elif inputGrade == "D":
+        print("Remarks: \x1b[38;5;93mDropped\x1b[0m")
+        print("\033[1mYour grade has been recorded.\033[0m")
 
 
 
