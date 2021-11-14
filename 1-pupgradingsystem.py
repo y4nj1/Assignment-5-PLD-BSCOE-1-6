@@ -50,6 +50,18 @@ def mark():
             print("Grade:\x1b[38;5;46m 1.25 \x1b[0m")
             print("Remarks: \x1b[38;5;46mExcellent\x1b[0m")
             print("\033[1mYour grade has been recorded.\033[0m")
+        elif inputGrade >= 91 and inputGrade <= 93:
+            print("Grade:\x1b[38;5;83m 1.50 \x1b[0m")
+            print("Remarks: \x1b[38;5;83mVery Good\x1b[0m")
+            print("\033[1mYour grade has been recorded.\033[0m")
+        elif inputGrade >= 88 and inputGrade <= 90:
+            print("Grade:\x1b[38;5;83m 1.75 \x1b[0m")
+            print("Remarks: \x1b[38;5;83mVery Good\x1b[0m")
+            print("\033[1mYour grade has been recorded.\033[0m")
+        elif inputGrade >= 85 and inputGrade <= 87:
+            print("Grade:\x1b[38;5;81m 2.00 \x1b[0m")
+            print("Remarks: \x1b[38;5;81mGood\x1b[0m")
+            print("\033[1mYour grade has been recorded.\033[0m")
 
 inputGrade = getLetter()
 _Mark = mark()
