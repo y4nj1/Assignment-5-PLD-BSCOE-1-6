@@ -31,9 +31,6 @@ def getLetter():
             return grade
 
 
-
-
-inputGrade = getLetter()
 def mark():
     if inputGrade == "INC":
        print("Remarks: \x1b[38;5;207mIncomplete\x1b[0m")
@@ -44,8 +41,18 @@ def mark():
     elif inputGrade == "D":
         print("Remarks: \x1b[38;5;93mDropped\x1b[0m")
         print("\033[1mYour grade has been recorded.\033[0m")
+    else:
+        if inputGrade >= 97 and inputGrade <= 100:
+            print("Grade:\x1b[38;5;46m 1.00 \x1b[0m")
+            print("Remarks: \x1b[38;5;46mExcellent\x1b[0m")
+            print("\033[1mYour grade has been recorded.\033[0m")
+        elif inputGrade >= 94 and inputGrade <= 96:
+            print("Grade:\x1b[38;5;46m 1.25 \x1b[0m")
+            print("Remarks: \x1b[38;5;46mExcellent\x1b[0m")
+            print("\033[1mYour grade has been recorded.\033[0m")
 
-
+inputGrade = getLetter()
+_Mark = mark()
 
 
 
