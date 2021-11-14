@@ -3,11 +3,16 @@
 # Find the lowest number using only if-else statement.
 # Display the lowest number
 
-# steps
-# 1. ask for three numbers
+
+def comparison(first, second, third):
+    if first > second and second < third:
+        print(f"The lowest number is the second number, {second}.")
+    elif first > third and second > third:
+        print (f"The lowest number is the third number, {third}.")
+   
+
 first = int(input("Enter the first number here: "))
 second = int(input("Enter the second number here: "))
 third = int(input("Enter the last number here: "))
-# 2. find the lowest number
-
-# 3. display 
+    
+display = comparison(first, second, third)
